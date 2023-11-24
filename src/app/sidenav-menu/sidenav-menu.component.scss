@@ -94,13 +94,13 @@ $active-width: 300px;
 }
 
 .sidebar ul li a:hover {
-	background-color: #fff;
+	background-color: #eee;
 	color: #12171e;
 	transition: all 0.3s ease;
 }
 
 .sidebar ul li a.active-link {
-	border: 1px solid #fff; // Set the background color to your active color
+	border: 1px solid #eee; // Set the background color to your active color
 }
 
 .sidebar ul li a i {
