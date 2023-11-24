@@ -15,6 +15,9 @@
 	background-color: #12171e;
 	padding: 0.4rem 0.8rem;
 	transition: all 0.5s ease;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 
 .sidebar.active ~ .main-content {
@@ -58,18 +61,6 @@
 .top .logo i {
 	font-size: 2rem;
 	margin-right: 5px;
-}
-
-.user {
-	display: flex;
-	align-items: center;
-	margin: 1rem 0;
-}
-
-.user p {
-	color: #fff;
-	opacity: 1;
-	margin-left: 1rem;
 }
 
 .sidebar p {
@@ -142,6 +133,13 @@
 	opacity: 1;
 }
 
+// remove tooltip on mobile
+@media screen and (max-width: 768px) {
+	.sidebar ul li:hover .tooltip {
+		opacity: 0;
+	}
+}
+
 .sidebar.active ul li .tooltip {
 	display: none;
 }
@@ -153,4 +151,8 @@
 	left: 80px;
 	transition: all 0.5s ease;
 	width: calc(100% - 80px);
+}
+
+.bottom {
+	margin-top: auto;
 }
