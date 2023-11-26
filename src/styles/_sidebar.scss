@@ -134,7 +134,12 @@ body.dark .sidebar header .toggle {
 	outline: none;
 	border: none;
 	border-radius: 6px;
+	padding-right: 8px;
 	background: var(--primary-color-light);
+}
+
+.sidebar.closed .search-box input {
+	padding-right: 0px;
 }
 
 .sidebar li a {
