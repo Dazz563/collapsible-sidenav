@@ -13,8 +13,8 @@ export class SidenavMenuComponent {
 
 	constructor(public darkModeService: DarkModeService) {
 		this.darkModeService.isDark$.subscribe((isDark) => {
-			console.log('isDark', isDark);
 			this.isDark = isDark;
+			this.setDarkMode(isDark);
 		});
 	}
 
@@ -26,5 +26,14 @@ export class SidenavMenuComponent {
 
 	toggleDarkMode() {
 		this.darkModeService.toggleDarkMode();
+	}
+
+	private setDarkMode(isDark: boolean) {
+		const body = document.getElementsByTagName('body')[0];
+		if (isDark) {
+			body.classList.add('dark');
+		} else {
+			body.classList.remove('dark');
+		}
 	}
 }
