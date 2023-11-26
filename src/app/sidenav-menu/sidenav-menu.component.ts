@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {DarkModeService} from '../services/dark-mode.service';
-import {Subscription} from 'rxjs';
 
 @Component({
 	selector: 'app-sidenav-menu',
