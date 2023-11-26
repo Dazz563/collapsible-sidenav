@@ -8,7 +8,7 @@ import {Subscription} from 'rxjs';
 	styleUrls: ['./sidenav-menu.component.scss'],
 })
 export class SidenavMenuComponent {
-	isOpen = true;
+	isOpen = false;
 	isDark!: boolean;
 
 	constructor(public darkModeService: DarkModeService) {
