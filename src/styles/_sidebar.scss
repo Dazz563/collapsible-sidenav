@@ -3,7 +3,8 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 250px;
+	width: 350px;
+	width: $sidebar-width;
 	height: 100%;
 	padding: 10px 14px;
 	background-color: var(--sidebar-color);
@@ -233,12 +234,11 @@ body.dark .menu-bar .mode i.moon {
 }
 // Toggle Switch end
 
-// home
 .main-content {
 	position: relative;
-	left: 250px;
+	left: $sidebar-width;
 	height: 100vh;
-	width: calc(100% - 250px); // opened width of sidebar
+	width: calc(100% - $sidebar-width);
 	background: var(--body-color);
 	transition: var(--tran-05);
 }
