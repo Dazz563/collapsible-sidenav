@@ -1,13 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Google Font Import - Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Imported Styles*/
+@import 'styles/sidebar';
+@import 'styles/dashboard';
+
 * {
-	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
-body,
-html {
-	font-family: 'Lato', sans-serif;
-	font-size: 16px;
-	line-height: 1.36;
+body {
+	height: 100vh;
+	background-color: var(--body-color);
+	transition: var(--tran-04);
+}
+
+:root {
+	/* ==== Colors ==== */
+	--body-color: #e4e9f7;
+	--sidebar-color: #fff;
+	--primary-color: #695cfe;
+	--primary-color-light: #f6f5ff;
+	--toggle-color: #ddd;
+	--text-color: #707070;
+
+	/* ==== Transition ==== */
+	--tran-02: all 0.2s ease;
+	--tran-03: all 0.3s ease;
+	--tran-04: all 0.4s ease;
+	--tran-05: all 0.5s ease;
+
+	.dark {
+		--body-color: #18191a;
+		--sidebar-color: #242526;
+		--primary-color: #3a3b3c;
+		--primary-color-light: #3a3b3c;
+		--toggle-color: #fff;
+		--text-color: #ccc;
+	}
 }

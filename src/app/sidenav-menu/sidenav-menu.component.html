@@ -1,64 +1,78 @@
-<div [ngClass]="{'active': isOpen}" class="sidebar">
-	<div>
-		<div class="top">
-			<div class="logo">
-				<i class="bx bxl-codepen"></i>
-				<span>CodeCommerce</span>
+<nav [ngClass]="{'closed': isOpen}" class="sidebar">
+	<header>
+		<div class="image-text">
+			<span class="image">
+				<img src="../../assets/logo.jpg" alt="logo" />
+			</span>
+
+			<div class="text header-text">
+				<span class="name">CodingLab</span>
+				<span class="profession">Web developer</span>
 			</div>
-			<i class="bx bx-menu menu-icon" (click)="isOpen = !isOpen"></i>
 		</div>
-		<div class="navigation">
-			<ul>
-				<li>
-					<a routerLink="/dashboard" routerLinkActive="active-link" href="#">
-						<i class="bx bxs-grid-alt"></i>
-						<span class="nav-item">Dashboard</span>
+		<i (click)="toggleMenu()" class="bx bx-chevron-right toggle"></i>
+	</header>
+
+	<div class="menu-bar">
+		<div class="menu">
+			<li class="search-box">
+				<i class="bx bx-search icon"></i>
+				<input type="search" placeholder="Search..." />
+			</li>
+			<ul class="menu-links">
+				<li class="nav-link">
+					<a routerLink="/dashboard" href="#">
+						<i class="bx bx-home-alt icon"></i>
+						<span class="text nav-text">Dashboard</span>
 					</a>
-					<span class="tooltip">Dashboard</span>
 				</li>
-				<li>
-					<a routerLink="/products" routerLinkActive="active-link" href="#">
-						<i class="bx bxs-shopping-bag"></i>
-						<span class="nav-item">Products</span>
+				<li class="nav-link">
+					<a routerLink="/products" href="#">
+						<i class="bx bxs-shopping-bag icon"></i>
+						<span class="text nav-text">Products</span>
 					</a>
-					<span class="tooltip">Products</span>
 				</li>
-				<li>
-					<a routerLink="/categories" routerLinkActive="active-link" href="#">
-						<i class="bx bx-list-check"></i>
-						<span class="nav-item">Categories</span>
+				<li class="nav-link">
+					<a routerLink="/categories" href="#">
+						<i class="bx bx-list-check icon"></i>
+						<span class="text nav-text">Categories</span>
 					</a>
-					<span class="tooltip">Categories</span>
 				</li>
-				<li>
+				<li class="nav-link">
 					<a routerLink="/orders" routerLinkActive="active-link" href="#">
-						<i class="bx bxs-food-menu"></i>
-						<span class="nav-item">Orders</span>
+						<i class="bx bxs-food-menu icon"></i>
+						<span class="text nav-text">Orders</span>
 					</a>
-					<span class="tooltip">Orders</span>
 				</li>
 			</ul>
 		</div>
-	</div>
-	<div class="bottom">
-		<ul>
+
+		<div class="bottom-content">
 			<li>
 				<a routerLink="/settings" routerLinkActive="active-link" href="#">
-					<i class="bx bx-cog"></i>
-					<span class="nav-item">Settings</span>
+					<i class="bx bx-cog icon"></i>
+					<span class="text nav-text">Settings</span>
 				</a>
-				<span class="tooltip">Settings</span>
 			</li>
 			<li>
 				<a href="#">
-					<i class="bx bx-log-out"></i>
-					<span class="nav-item">Logout</span>
+					<i class="bx bx-log-out icon"></i>
+					<span class="text nav-text">Logout</span>
 				</a>
-				<span class="tooltip">Logout</span>
 			</li>
-		</ul>
+			<li class="mode">
+				<div class="moon-sun">
+					<i [ngClass]="isDark ? 'bx bx-sun icon sun' : 'bx bx-moon icon moon'"></i>
+				</div>
+				<span class="mode-text text">{{ isDark ? 'Light Mode': 'Dark Mode' }}</span>
+
+				<div (click)="toggleDarkMode()" class="toggle-switch">
+					<span class="switch"></span>
+				</div>
+			</li>
+		</div>
 	</div>
-</div>
+</nav>
 
 <div class="main-content">
 	<router-outlet></router-outlet>
