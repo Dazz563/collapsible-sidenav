@@ -7,7 +7,7 @@ import {DarkModeService} from '../services/dark-mode.service';
 	styleUrls: ['./sidenav-menu.component.scss'],
 })
 export class SidenavMenuComponent {
-	isOpen = false;
+	isOpen = true;
 	isDark!: boolean;
 
 	constructor(public darkModeService: DarkModeService) {
