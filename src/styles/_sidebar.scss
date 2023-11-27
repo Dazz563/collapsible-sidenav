@@ -262,24 +262,6 @@ nav.sidebar {
 	background-color: var(--sidebar-color);
 	transition: var(--tran-05);
 	z-index: 100;
-	// &.closed {
-	// 	width: 88px;
-	// 	& .text {
-	// 		opacity: 0;
-	// 	}
-	// 	.toggle {
-	// 		transform: translateY(-50%) rotate(0deg);
-	// 	}
-
-	// 	// Styles for the main content when the sidebar is closed
-	// 	& ~ .main-content {
-	// 		left: 88px;
-	// 		width: calc(100% - 88px);
-	// 	}
-	// 	.image {
-	// 		justify-content: center;
-	// 	}
-	// }
 
 	.text {
 		font-size: 16px;
@@ -337,7 +319,7 @@ nav.sidebar {
 		}
 	}
 
-	/* ==== Menu Bar ==== */
+	/* ==== Side Menu Bar ==== */
 	.menu-bar {
 		height: calc(100% - 50px);
 		display: flex;
@@ -409,7 +391,7 @@ nav.sidebar {
 		}
 
 		/* ==== Bottom Content ==== */
-		.bottom-content {
+		.menu-bar-bottom {
 			li {
 				height: 50px;
 				margin-top: 10px;
