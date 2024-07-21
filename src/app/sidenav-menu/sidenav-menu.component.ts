@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {DarkModeService} from '../services/dark-mode.service';
+import { Component } from '@angular/core';
+import { DarkModeService } from '../services/dark-mode.service';
 
 @Component({
 	selector: 'app-sidenav-menu',
@@ -7,7 +7,7 @@ import {DarkModeService} from '../services/dark-mode.service';
 	styleUrls: ['./sidenav-menu.component.scss'],
 })
 export class SidenavMenuComponent {
-	isOpen = true;
+	isOpen = false;
 	isDark!: boolean;
 
 	constructor(public darkModeService: DarkModeService) {
@@ -19,8 +19,12 @@ export class SidenavMenuComponent {
 
 	ngOnInit(): void {}
 
-	toggleMenu() {
-		this.isOpen = !this.isOpen;
+	// toggleMenu() {
+	// 	this.isOpen = !this.isOpen;
+	// }
+
+	toggleMenu(isHovered: boolean) {
+		this.isOpen = isHovered;
 	}
 
 	toggleDarkMode() {

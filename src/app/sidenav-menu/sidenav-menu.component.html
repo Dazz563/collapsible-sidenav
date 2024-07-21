@@ -1,4 +1,9 @@
-<nav [ngClass]="{'closed': !isOpen}" class="sidebar">
+<nav
+	[ngClass]="{'closed': !isOpen}"
+	class="sidebar"
+	(mouseenter)="toggleMenu(true)"
+	(mouseleave)="toggleMenu(false)"
+>
 	<header>
 		<div class="image-text">
 			<span class="image">
@@ -6,11 +11,11 @@
 			</span>
 
 			<div class="text header-text">
-				<span class="name">CodingLab</span>
+				<span class="name">Boiler Plate</span>
 				<span class="profession">Web developer</span>
 			</div>
 		</div>
-		<i [ngClass]="{'mode-switch': isDark}" (click)="toggleMenu()" class="bx bx-chevron-right toggle"></i>
+		<!-- <i [ngClass]="{'mode-switch': isDark}" (click)="toggleMenu()" class="bx bx-chevron-right toggle"></i> -->
 	</header>
 
 	<div class="menu-bar">
@@ -21,25 +26,42 @@
 			</li>
 			<ul class="menu-links">
 				<li class="nav-link">
-					<a [ngClass]="{'mode-switch': isDark}" routerLink="/dashboard" href="#">
+					<a
+						[ngClass]="{'mode-switch': isDark}"
+						routerLink="/dashboard"
+						href="#"
+					>
 						<i class="bx bx-home-alt icon"></i>
 						<span class="text nav-text">Dashboard</span>
 					</a>
 				</li>
 				<li class="nav-link">
-					<a [ngClass]="{'mode-switch': isDark}" routerLink="/products" href="#">
+					<a
+						[ngClass]="{'mode-switch': isDark}"
+						routerLink="/products"
+						href="#"
+					>
 						<i class="bx bxs-shopping-bag icon"></i>
 						<span class="text nav-text">Products</span>
 					</a>
 				</li>
 				<li class="nav-link">
-					<a [ngClass]="{'mode-switch': isDark}" routerLink="/categories" href="#">
+					<a
+						[ngClass]="{'mode-switch': isDark}"
+						routerLink="/categories"
+						href="#"
+					>
 						<i class="bx bx-list-check icon"></i>
 						<span class="text nav-text">Categories</span>
 					</a>
 				</li>
 				<li class="nav-link">
-					<a [ngClass]="{'mode-switch': isDark}" routerLink="/orders" routerLinkActive="active-link" href="#">
+					<a
+						[ngClass]="{'mode-switch': isDark}"
+						routerLink="/orders"
+						routerLinkActive="active-link"
+						href="#"
+					>
 						<i class="bx bxs-food-menu icon"></i>
 						<span class="text nav-text">Orders</span>
 					</a>
@@ -49,7 +71,12 @@
 
 		<div class="menu-bar-bottom">
 			<li>
-				<a [ngClass]="{'mode-switch': isDark}" routerLink="/settings" routerLinkActive="active-link" href="#">
+				<a
+					[ngClass]="{'mode-switch': isDark}"
+					routerLink="/settings"
+					routerLinkActive="active-link"
+					href="#"
+				>
 					<i class="bx bx-cog icon"></i>
 					<span class="text nav-text">Settings</span>
 				</a>
@@ -63,10 +90,14 @@
 			<li class="mode">
 				<div class="moon-sun">
 					<ng-container *ngIf="isOpen">
-						<i [ngClass]="isDark ? 'bx bx-sun icon sun' : 'bx bx-moon icon moon'"></i>
+						<i
+							[ngClass]="isDark ? 'bx bx-sun icon sun' : 'bx bx-moon icon moon'"
+						></i>
 					</ng-container>
 				</div>
-				<span class="mode-text text">{{ isDark ? 'Light Mode': 'Dark Mode' }}</span>
+				<span class="mode-text text">
+					{{ isDark ? 'Light Mode': 'Dark Mode' }}
+				</span>
 
 				<div (click)="toggleDarkMode()" class="toggle-switch">
 					<span [ngClass]="{'mode-switch': isDark}" class="switch"></span>

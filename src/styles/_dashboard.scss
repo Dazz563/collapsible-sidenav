@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  /* or row, depending on your layout needs */
+  padding: 5rem 2rem 0 2rem;
+  height: 100vh;
+  /* This makes sure the .main fills the viewport height */
+
+  .card {
+    display: flex;
+
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    height: 250px;
+    flex-grow: 1;
+
+
+    .sidenav {
+      border-right: 1px solid #eee;
+    }
+  }
+}
